@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mukta:wght@200&family=Roboto+Condensed:wght@300;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="mystyle.css">
+    <title>SunbeamCars Inc.</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#">
+            <h1 class="h1">SunbeamCars Inc.</h1>
+        </a>
+        <a href="#">
+            <p class="login">Log in</p>
+        </a>
+        <a href="#"><i class="material-icons">user icon</i></a>
+    </header>
+
+    <section>
+        <div class="welcome">
+            <form class="formula" id="form">
+                <fieldset>
+                    <legend class="legend">Find the car that suits you</legend>
+                    <div class="formpart">
+                        <label for="pickup" class="label">I pick it up</label><br>
+                        <input type="date" name="pickup" class="input" id="arrivalfield">
+                    </div>
+                    <div class="formpart">
+                        <label for="handin" class="label">I hand it in</label><br>
+                        <input type="date" name="handin" class="input" id="departurefield">
+                    </div>
+                    <div class="formpart">
+                        <label for="number" class="label">Number of persons</label><br>
+                        <input type="number" name="people" min="1" max="7" class="input" id="persons" required>
+                    </div>
+                    <div class="formpart">
+                        <label for="suitcases" class="label">Number of suitcases</label><br>
+                        <select name="numberlist" form="numberform" class="input" id="suitcases" required>
+                            <option value="0">0 - only a bag</option>
+                            <option value="1">1 suitcase</option>
+                            <option value="2">2 suitcases</option>
+                            <option value="3">3 suitcases</option>
+                            <option value="4">4 suitcases</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button type="submit" class="search">Search</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+
+    <section>
+        <div id="output"></div>
+        <div id="error"></div>
+    </section>
+    <script src="data.js"></script>
+    <script src="javascript.js"></script>
+</body>
+
+</html>
